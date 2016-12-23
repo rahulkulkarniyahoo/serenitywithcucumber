@@ -3,9 +3,8 @@ package learnserenity;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pages.SearchResultPage;
-import pages.TVPage;
-import pages.WebPage;
+import org.junit.Assert;
+import pages.*;
 
 /**
  * Created by rahul.kulkarni on 22/12/2016.
@@ -14,6 +13,36 @@ public class StepDefinition {
 
     WebPage webPage;
     SearchResultPage searchResultPage;
+
+    DailyMailLoginPage dailyMailLoginPage;
+   MyAccountPage myAccountPage;
+
+
+    @Given("^User opens dailymailplus website$")
+    public void user_opens_dailymailplus_website() throws Throwable {
+    dailyMailLoginPage.open();
+    //Assert.assertTrue(true);
+
+    }
+
+    @When("^user enters userid and password$")
+    public void user_enters_userid_and_password() throws Throwable {
+    dailyMailLoginPage.enterUseridAndPassword();
+        //Assert.assertTrue(true);
+
+    }
+
+    @Then("^user can log in$")
+    public void user_can_log_in() throws Throwable {
+        myAccountPage.checkTextOnPage();
+        //Assert.assertTrue(true);
+    }
+
+
+
+
+
+
 
 
     @Given("^User opens Google website$")
