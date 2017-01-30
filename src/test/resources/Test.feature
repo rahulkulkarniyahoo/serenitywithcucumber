@@ -17,6 +17,6 @@ Feature: Searching by keyword
 
   @Mail123
   Scenario: Access Salesforce Website
-    Given User opens dailymailplus website
+  Given User opens dailymailplus website
     When user enters userid and password
     Then user can log in

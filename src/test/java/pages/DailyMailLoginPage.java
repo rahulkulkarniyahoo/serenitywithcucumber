@@ -26,10 +26,6 @@ public class DailyMailLoginPage extends PageObject{
     WebElement loginButton;
 
 
-//signinemail
-    //signinpassword
-    //submit
-
     public void enterUseridAndPassword() {
 
         System.out.println("Came here now.. ");
@@ -40,8 +36,5 @@ public class DailyMailLoginPage extends PageObject{
         waitFor(titleContains("interactive app"));
         System.out.println("Came till here...");
 
-
-        //mppuat110test@mailinator.com
-              //  Password123
     }
 }
